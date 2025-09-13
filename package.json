@@ -1,7 +1,13 @@
 {
   "name": "bts-chatbot-backend",
   "version": "1.0.0",
+  "description": "BTS Chatbot backend on Vercel",
   "main": "index.js",
+  "scripts": {
+    "test": "echo \"No tests\" && exit 0"
+  },
+  "keywords": ["bts", "chatbot", "vercel"],
+  "author": "you",
   "license": "MIT",
   "dependencies": {
     "axios": "^1.6.0"
