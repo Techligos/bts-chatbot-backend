@@ -35,9 +35,14 @@ export default async function handler(req, res) {
     const reply = response.data.choices[0].message.content;
     res.status(200).json({ reply });
   } catch (error) {
-    console.error(error.response ? error.response.data : error.message);
-    res.status(500).json({ reply: "Oops 😅 I couldn’t reply right now." });
+  console.error("Zuki API error:", error.response ? error.response.data : error.message);
+  res.status(500).json({
+    reply: "Oops 😅 I couldn’t reply right now.",
+    error: error.response ? error.response.data : error.message
+  });
+
   }
 }
+
 
 
